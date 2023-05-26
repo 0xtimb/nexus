@@ -249,15 +249,15 @@ function TradeModal({
     }
   }, [isListingSuccess, isFulfillSuccess, isCancelSuccess]);
 
-  const bscscanLink = useMemo(() => {
+  const thetascanLink = useMemo(() => {
     if (fulfillTxnHash)
-      return `https://testnet.bscscan.com/tx/${fulfillTxnHash.hash}`;
+      return `https://testnet.thetascan.com/tx/${fulfillTxnHash.hash}`;
 
     if (cancelTxnHash)
-      return `https://testnet.bscscan.com/tx/${cancelTxnHash.hash}`;
+      return `https://testnet.thetascan.com/tx/${cancelTxnHash.hash}`;
 
     if (createTxnHash)
-      return `https://testnet.bscscan.com/tx/${createTxnHash.hash}`;
+      return `https://testnet.thetascan.com/tx/${createTxnHash.hash}`;
   }, [fulfillTxnHash, cancelTxnHash, createTxnHash]);
 
   const listingPriceFiat = useMemo(
@@ -320,7 +320,7 @@ function TradeModal({
                   </VStack>
                   <VStack alignItems="flex-end">
                     <Text className={styles.modalTitle}>
-                      {listingPrice} BNB
+                      {listingPrice} TFUEL
                     </Text>
                     <Text className={styles.modalSubtitle}>
                       ${listingPriceFiat} USD
@@ -336,14 +336,15 @@ function TradeModal({
                       View your collection
                     </Button>
                   </Link>
-                  <ChakraLink href={bscscanLink} isExternal>
+                  <ChakraLink href={thetascanLink} isExternal>
                     <Button className={styles.modalBtn2}>
                       View transaction
                     </Button>
                   </ChakraLink>
                 </HStack>
                 <Text fontSize="12px" pt="0.5rem">
-                  It may take up to ~3 min for BSCscan to index the transaction.
+                  It may take up to ~3 min for Thetascan to index the
+                  transaction.
                 </Text>
               </VStack>
             </VStack>
@@ -384,11 +385,11 @@ function TradeModal({
                 </HStack>
               </HStack>
               <Box h="1rem"></Box>
-              <ChakraLink href={bscscanLink} isExternal>
+              <ChakraLink href={thetascanLink} isExternal>
                 <Button className={styles.modalBtn}>View transaction</Button>
               </ChakraLink>
               <Text fontSize="12px" pt="0.5rem">
-                It may take up to ~3 min for BSCscan to index the transaction.
+                It may take up to ~3 min for Thetascan to index the transaction.
               </Text>
             </VStack>
           </ModalBody>
@@ -425,7 +426,7 @@ function TradeModal({
                 {modalState === MODAL_STATE.FULFILL_LISTING && (
                   <VStack alignItems="flex-end">
                     <Text className={styles.modalTitle}>
-                      {listingPrice} BNB
+                      {listingPrice} TFUEL
                     </Text>
                     <Text className={styles.modalSubtitle}>
                       ${listingPriceFiat} USD
@@ -451,7 +452,7 @@ function TradeModal({
                       value={price}
                       placeholder="0"
                     ></Input>
-                    <Text className={styles.inputUnit}>BNB</Text>
+                    <Text className={styles.inputUnit}>TFUEL</Text>
                   </VStack>
                 </VStack>
                 <VStack className={styles.inputContainer}>

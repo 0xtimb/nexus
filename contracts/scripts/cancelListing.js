@@ -8,7 +8,9 @@ const hre = require("hardhat");
 
 async function main() {
   try {
-    const NexusProtocol = await hre.ethers.getContractFactory("NexusProtocol");
+    const NexusProtocol = await hre.TFUELers.getContractFactory(
+      "NexusProtocol"
+    );
 
     const nexus = await NexusProtocol.attach(
       process.env.NEXUS_CONTRACT_ADDRESS // deployed contract address
@@ -18,7 +20,7 @@ async function main() {
 
     console.log("Creating listing...");
 
-    //   price: 0.001 ETH
+    //   price: 0.001 TFUEL
     const res = await nexus.cancelListing(process.env.NFT_CONTRACT_ADDRESS, 2);
 
     console.log("listing created!", res);

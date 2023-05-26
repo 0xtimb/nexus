@@ -168,7 +168,7 @@ function Asset() {
       },
       {
         title: "Blockchain",
-        subtitle: "BSC Testnet",
+        subtitle: "Theta Testnet",
       },
       {
         title: "Model",
@@ -179,8 +179,8 @@ function Asset() {
         link: tokenURI,
       },
       {
-        title: "View collection on BSCscan",
-        link: `https://testnet.bscscan.com/token/${collectionAddress}`,
+        title: "View collection on Thetascan",
+        link: `https://testnet.thetascan.com/token/${collectionAddress}`,
       },
     ];
   }, [metadata, tokenURI]);
@@ -312,7 +312,7 @@ function Asset() {
                         <VStack className={styles.historyLeftSection}>
                           {price && (
                             <Text className={styles.historyTitle}>
-                              {price} BNB
+                              {price} TFUEL
                             </Text>
                           )}
                           {fiatPrice && (
@@ -380,7 +380,7 @@ function Asset() {
           ) : (
             <VStack className={styles.priceContainer}>
               <Text className={styles.priceTitle}>Price</Text>
-              <Text className={styles.priceTag}>{listingPrice} BNB</Text>
+              <Text className={styles.priceTag}>{listingPrice} TFUEL</Text>
               <Text className={styles.priceUSD}>${listingPriceFiat} USD</Text>
               <Button className={styles.purchaseBtn} onClick={onOpen}>
                 {isOwner ? "Cancel listing" : "Purchase"}

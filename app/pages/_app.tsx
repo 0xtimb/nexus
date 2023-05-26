@@ -22,28 +22,26 @@ import {
 import merge from "lodash.merge";
 import Head from "next/head";
 
-const binanceChain: Chain = {
-  id: 97,
-  name: "BSC Testnet",
-  network: "BNB",
-  iconUrl: "/bsc_logo.png",
-  iconBackground: "#18151E",
+const thetaTestnet: Chain = {
+  id: 365,
+  name: "Theta Testnet",
+  network: "TFUEL",
   nativeCurrency: {
     decimals: 18,
-    name: "BNB",
-    symbol: "BNB",
+    name: "TFUEL",
+    symbol: "TFUEL",
   },
   rpcUrls: {
-    default: "https://bsc-testnet.publicnode.com",
+    default: "https://eth-rpc-api-testnet.thetatoken.org/rpc",
   },
   blockExplorers: {
-    default: { name: "Explorer", url: "https://testnet.bscscan.com/" },
+    default: { name: "Explorer", url: "https://beta-explorer.thetatoken.org/" },
   },
   testnet: true,
 };
 
 const { chains, provider } = configureChains(
-  [binanceChain],
+  [thetaTestnet],
   [publicProvider({ priority: 0 })]
 );
 

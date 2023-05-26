@@ -2,22 +2,22 @@ export const exploreAssets = [
   {
     image: "/mask.png",
     title: "SF Light- Fighter X6",
-    subtitle: "Floor: 8 TRX",
+    subtitle: "Floor: 8 TFUEL",
   },
   {
     image: "/mask.png",
     title: "SF Light- Fighter X6",
-    subtitle: "Floor: 8 TRX",
+    subtitle: "Floor: 8 TFUEL",
   },
   {
     image: "/mask.png",
     title: "SF Light- Fighter X6",
-    subtitle: "Floor: 8 TRX",
+    subtitle: "Floor: 8 TFUEL",
   },
   {
     image: "/mask.png",
     title: "SF Light- Fighter X6",
-    subtitle: "Floor: 8 TRX",
+    subtitle: "Floor: 8 TFUEL",
   },
 ];
 

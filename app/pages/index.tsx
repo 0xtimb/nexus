@@ -44,7 +44,7 @@ const Home: NextPage = () => {
             </Text>
             <Text className={styles.landingSubtitle}>
               Nexus is the world’s first metaverse focused marketplace built on
-              the Binance Smart Chain
+              the Theta Network
             </Text>
             <HStack>
               <Link href="/explore">
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
                   Space Fighters (3rd Edition)
                 </Text>
                 <Text className={styles.landingImageCaptionSubtitle2}>
-                  Floor: 0.001 BNB
+                  Floor: 0.001 TFUEL
                 </Text>
               </VStack>
             </VStack>
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
                     {name}
                   </Text>
                   <Text className={styles.landingImageCaptionSubtitle}>
-                    Floor: {floor} BNB
+                    Floor: {floor} TFUEL
                   </Text>
                 </VStack>
               </VStack>
@@ -147,8 +147,8 @@ const Home: NextPage = () => {
                             <Text>{collection}</Text>
                           </HStack>
                         </Td>
-                        <Td className={styles.tableCell}>{floor} BNB</Td>
-                        <Td className={styles.tableCell}>{volume} BNB</Td>
+                        <Td className={styles.tableCell}>{floor} TFUEL</Td>
+                        <Td className={styles.tableCell}>{volume} TFUEL</Td>
                       </Tr>
                     ))}
                 </Tbody>
@@ -184,8 +184,8 @@ const Home: NextPage = () => {
                             <Text>{collection}</Text>
                           </HStack>
                         </Td>
-                        <Td className={styles.tableCell}>{floor} BNB</Td>
-                        <Td className={styles.tableCell}>{volume} BNB</Td>
+                        <Td className={styles.tableCell}>{floor} TFUEL</Td>
+                        <Td className={styles.tableCell}>{volume} TFUEL</Td>
                       </Tr>
                     ))}
                 </Tbody>

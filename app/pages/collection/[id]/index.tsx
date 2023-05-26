@@ -134,7 +134,7 @@ function Collection() {
         <HStack className={styles.statsContainer}>
           <HStack>
             <Text className={styles.attribute}>Total volume</Text>
-            <Image alt="bsc" src="/bsc.png" className={styles.csc}></Image>
+            <Image alt="theta" src="/theta.png" className={styles.csc}></Image>
             <Text className={styles.attributeBold}>
               <Text fontWeight={700} as="span">
                 2K
@@ -144,10 +144,10 @@ function Collection() {
           </HStack>
           <HStack>
             <Text className={styles.attribute}>Floor price</Text>
-            <Image alt="bsc" src="/bsc.png" className={styles.csc}></Image>
+            <Image alt="theta" src="/theta.png" className={styles.csc}></Image>
             <Text>
               <Text fontWeight={700} as="span">
-                0.001 BNB
+                0.001 TFUEL
               </Text>{" "}
               ·
             </Text>

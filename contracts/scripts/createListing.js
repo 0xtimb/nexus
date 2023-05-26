@@ -18,7 +18,7 @@ async function main() {
 
     console.log("Creating listing...");
 
-    // price: 0.001 ETH
+    // price: 0.001 TFUEL
 
     for (let tokenId = 1; tokenId <= 6; tokenId++) {
       const txn = await nexus.createListing(
