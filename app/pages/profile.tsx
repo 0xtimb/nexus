@@ -78,7 +78,7 @@ function Profile() {
       </VStack>
       <Box className={styles.divider}></Box>
       <HStack className={styles.sectionTitleContainer}>
-        <Text className={styles.sectionTitle}>{assets.length - 1} items</Text>
+        <Text className={styles.sectionTitle}>{assets.length} items</Text>
       </HStack>
       <SimpleGrid columns={4} w="95%" gap="1rem">
         {assets

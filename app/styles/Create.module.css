@@ -279,6 +279,6 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  color: #f8f8f8;
+  color: #f8f8f8 !important;
   background-color: transparent !important;
 }

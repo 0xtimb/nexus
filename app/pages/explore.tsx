@@ -11,7 +11,7 @@ const collections = [
     creator: "0x6B4583438C24839ea459e34e9F21aD419A846B0b",
     image:
       "https://bafybeifzqr6z4s5wqalnhy2warxknpoa4asaquom7cj4s22sbvnxbqisnq.ipfs.w3s.link/pokemon.png",
-    address: "0x656556f3c2B9fDFCebE43303500327F4773d4aAD",
+    address: "0x0062c28aA73a806f7C52e47E5CA4ab01891C9928",
   },
 
   {
@@ -21,7 +21,7 @@ const collections = [
     image:
       "https://bafybeihjy355g56qn35qwkdypbnrdrezg26antsxci5xg4qcmlg6uuas2a.ipfs.w3s.link/s.png",
     creator: "0x6B4583438C24839ea459e34e9F21aD419A846B0b",
-    address: "0x3595777127FB968808CF5b35Ea4A1fF2098c1331",
+    address: "0xfdD017974DdBb5EeaFca9FDc31eeBefE22dA6Be5",
   },
   {
     description:
@@ -30,7 +30,7 @@ const collections = [
     image:
       "https://bafybeic4e6qv3qggdy7ezgz5oghejfpzsfjeeq7nw7gj6zwhejpe7om4ja.ipfs.w3s.link/journey.png",
     creator: "0x6B4583438C24839ea459e34e9F21aD419A846B0b",
-    address: "0xa57262F1D9085cc8b29A5355056EDD8Da9f10200",
+    address: "0x430294678061085D6c29BE97a9aEb4C0ACd94AA0",
   },
 ];
 

@@ -34,7 +34,7 @@ function Asset() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { id: collectionAddress, pid: tokenId } = router.query;
   const [metadata, setMetadata] = useState<any>();
-  const [ethPrice, setEthPrice] = useState<number>(314);
+  const [ethPrice, setEthPrice] = useState<number>(0.03948);
   const [history, setHistory] = useState<any[]>([]);
   const [collMetadata, setCollMetadata] = useState<any>();
 

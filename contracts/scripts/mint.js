@@ -1,7 +1,32 @@
 require("dotenv").config();
 const hre = require("hardhat");
 
-// const tokenURI = "https://bafybeibz2muftsdqar5oqzgcbyhd6eak7qignh4lmanefxx5r6zcjjct2e.ipfs.w3s.link/journey.json";
+const journeyURIs = [
+  "https://bafybeibz2muftsdqar5oqzgcbyhd6eak7qignh4lmanefxx5r6zcjjct2e.ipfs.w3s.link/journey.json",
+  "https://bafybeibz2muftsdqar5oqzgcbyhd6eak7qignh4lmanefxx5r6zcjjct2e.ipfs.w3s.link/journey.json",
+  "https://bafybeibz2muftsdqar5oqzgcbyhd6eak7qignh4lmanefxx5r6zcjjct2e.ipfs.w3s.link/journey.json",
+  "https://bafybeibz2muftsdqar5oqzgcbyhd6eak7qignh4lmanefxx5r6zcjjct2e.ipfs.w3s.link/journey.json",
+  "https://bafybeibz2muftsdqar5oqzgcbyhd6eak7qignh4lmanefxx5r6zcjjct2e.ipfs.w3s.link/journey.json",
+  "https://bafybeibz2muftsdqar5oqzgcbyhd6eak7qignh4lmanefxx5r6zcjjct2e.ipfs.w3s.link/journey.json",
+];
+
+const slendermanURIs = [
+  "https://bafybeiggcwud3tyjl2yj5s3ijj2wnjpe3mmmcxglsy45gvg5a7opjyjtky.ipfs.w3s.link/slenderman.json",
+  "https://bafybeiggcwud3tyjl2yj5s3ijj2wnjpe3mmmcxglsy45gvg5a7opjyjtky.ipfs.w3s.link/slenderman.json",
+  "https://bafybeiggcwud3tyjl2yj5s3ijj2wnjpe3mmmcxglsy45gvg5a7opjyjtky.ipfs.w3s.link/slenderman.json",
+  "https://bafybeiggcwud3tyjl2yj5s3ijj2wnjpe3mmmcxglsy45gvg5a7opjyjtky.ipfs.w3s.link/slenderman.json",
+  "https://bafybeiggcwud3tyjl2yj5s3ijj2wnjpe3mmmcxglsy45gvg5a7opjyjtky.ipfs.w3s.link/slenderman.json",
+  "https://bafybeiggcwud3tyjl2yj5s3ijj2wnjpe3mmmcxglsy45gvg5a7opjyjtky.ipfs.w3s.link/slenderman.json",
+];
+
+const pokemonURIs = [
+  "https://bafybeige5msa2ew7qgrqtp3f667gvvsfz4z7a64ezk6v4vy2nnopqpxqeq.ipfs.w3s.link/1.json",
+  "https://bafybeicumamfmebf254r66lzcjo5azj76gesogb7jff6hus2gjhjn3aux4.ipfs.w3s.link/2.json",
+  "https://bafybeidnaskbwd237rh7kdw2jhuqxnb3zbt2jvllonfk6c6arm2j24hoae.ipfs.w3s.link/3.json",
+  "https://bafybeide5qfugo56fkg2cjprz64v3eyzmgxptgez74ddnct6xmz2ulnliq.ipfs.w3s.link/4.json",
+  "https://bafybeialgmilinko3l4teecn3faroktldt5kiuelcsscb46ay4yzwfbxxm.ipfs.w3s.link/5.json",
+  "https://bafybeigosdsf2626uv5axqhwnm2b7fmgharcgsbq423aocrpzjnqnzx36q.ipfs.w3s.link/6.json",
+];
 
 const tokenURIs = [
   "https://bafybeid4ppp6fhjsjp35bnhrwmdjydrrfdtullcy2pmbzyunuthi4aiaoa.ipfs.w3s.link/1.json",
@@ -16,8 +41,10 @@ const tokenURIs = [
   "https://bafybeifucystmc6bff3szztknxq2appmksihqhjbjqfnhvgnb3xbfzkojm.ipfs.w3s.link/10.json",
 ];
 
-const NFT_CONTRACT_ADDRESS = process.env.POKEMON_CONTRACT_ADDRESS ?? "";
-const userAddress = "0xDc7bE36Cbd7B28f13acbdAa084457DA9C6D210D4";
+const NFT_CONTRACT_ADDRESS = process.env.SLENDERMAN_CONTRACT_ADDRESS ?? "";
+const URIs = slendermanURIs;
+
+const userAddress = "0x72f97e9Be4C6EB8f0eb2fD483945385A9a742C0b";
 
 async function main() {
   const NexusNFT = await hre.ethers.getContractFactory("NexusNFT");
@@ -28,10 +55,10 @@ async function main() {
 
   console.log("Minting...");
   try {
-    for (let i = 0; i < 10; i++) {
-      const txn = await nexusNFT.mintWithTokenURI(userAddress, tokenURIs[i]);
+    for (let i = 0; i < URIs.length; i++) {
+      const txn = await nexusNFT.mintWithTokenURI(userAddress, URIs[i]);
       await txn.wait();
-      await new Promise((r) => setTimeout(r, 3000));
+      await new Promise((r) => setTimeout(r, 1000));
       console.log("minted tokenId: ", i);
     }
   } catch (err) {

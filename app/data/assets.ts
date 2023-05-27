@@ -98,17 +98,17 @@ export const games = [
   {
     name: "Journey",
     image: "/journey.png",
-    link: "/collection/0x80E526b6bA7aB2C9Ad89Bc88E241a2D23D425F73",
+    link: "/collection/0x430294678061085D6c29BE97a9aEb4C0ACd94AA0",
   },
   {
     name: "Slender Man: The Arrival",
     image: "/slenderman.png",
-    link: "/collection/0x0A197D7FF08a8110eC41e0934C69159505eF5A6D",
+    link: "/collection/0xfdD017974DdBb5EeaFca9FDc31eeBefE22dA6Be5",
   },
   {
     name: "Pokemon 2022 (Melee Ver.)",
     image: "/pokemon.png",
-    link: "/collection/0x2506d1Ac00DfA924998ebc78C704E33E66a731D4",
+    link: "/collection/0x0062c28aA73a806f7C52e47E5CA4ab01891C9928",
   },
 ];
 

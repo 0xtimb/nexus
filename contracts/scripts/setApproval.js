@@ -10,7 +10,7 @@ async function main() {
   const NexusNFT = await hre.ethers.getContractFactory("NexusNFT");
 
   const nexusNFT = await NexusNFT.attach(
-    process.env.NFT_CONTRACT_ADDRESS // deployed contract address
+    process.env.POKEMON_CONTRACT_ADDRESS // deployed contract address
   );
 
   console.log("NexusNFT attached to:", nexusNFT.address);

@@ -21,15 +21,15 @@ import { abridgeAddress } from "@utils/abridgeAddress";
 
 function getCoverImage(address) {
   switch (address) {
-    case "0xa57262F1D9085cc8b29A5355056EDD8Da9f10200":
+    case "0x430294678061085D6c29BE97a9aEb4C0ACd94AA0":
       return "/journey.jpg";
-    case "0x3595777127FB968808CF5b35Ea4A1fF2098c1331":
+    case "0xfdD017974DdBb5EeaFca9FDc31eeBefE22dA6Be5":
       return "/slenderman.jpg";
-    case "0x656556f3c2B9fDFCebE43303500327F4773d4aAD":
+    case "0x0062c28aA73a806f7C52e47E5CA4ab01891C9928":
       return "/pokemon.jpg";
-    case "0x78f490acB223A6dF1DF4Bebf275F0A52aB836228":
+    case "0x9eef216C533732a8F4bfBCc821AF7FbF7F8f8840":
       return "/cover.jpg";
-    case "0xDF539f2B4adFdFC8cC8F238de224dC4d9F842baE":
+    case "0x37fe9bc0a05fae8a9b5b299Ff2dcaf34245CC26E":
       return "/nexus.jpg";
     default:
       return "/cover.png";

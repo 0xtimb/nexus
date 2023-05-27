@@ -6,6 +6,9 @@
 // global scope, and execute the script.
 const hre = require("hardhat");
 
+const collectionAddress = process.env.POKEMON_CONTRACT_ADDRESS || "";
+const tokenNum = 10;
+
 async function main() {
   try {
     const NexusProtocol = await hre.ethers.getContractFactory("NexusProtocol");
@@ -18,16 +21,14 @@ async function main() {
 
     console.log("Creating listing...");
 
-    // price: 0.001 TFUEL
-
-    for (let tokenId = 1; tokenId <= 6; tokenId++) {
+    for (let tokenId = 1; tokenId <= tokenNum; tokenId++) {
       const txn = await nexus.createListing(
-        process.env.POKEMON_CONTRACT_ADDRESS,
+        collectionAddress,
         tokenId,
         1000000000000000
       );
       await txn.wait();
-      await new Promise((r) => setTimeout(r, 3000));
+      await new Promise((r) => setTimeout(r, 500));
       console.log("listing created for tokenId ", tokenId);
     }
     console.log("listings created!");

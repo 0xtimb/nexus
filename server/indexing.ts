@@ -21,6 +21,24 @@ function getTimestamp() {
   return new Date().toLocaleString("en-us");
 }
 
+const journeyURIs = [
+  "https://bafybeibz2muftsdqar5oqzgcbyhd6eak7qignh4lmanefxx5r6zcjjct2e.ipfs.w3s.link/journey.json",
+  "https://bafybeibz2muftsdqar5oqzgcbyhd6eak7qignh4lmanefxx5r6zcjjct2e.ipfs.w3s.link/journey.json",
+  "https://bafybeibz2muftsdqar5oqzgcbyhd6eak7qignh4lmanefxx5r6zcjjct2e.ipfs.w3s.link/journey.json",
+  "https://bafybeibz2muftsdqar5oqzgcbyhd6eak7qignh4lmanefxx5r6zcjjct2e.ipfs.w3s.link/journey.json",
+  "https://bafybeibz2muftsdqar5oqzgcbyhd6eak7qignh4lmanefxx5r6zcjjct2e.ipfs.w3s.link/journey.json",
+  "https://bafybeibz2muftsdqar5oqzgcbyhd6eak7qignh4lmanefxx5r6zcjjct2e.ipfs.w3s.link/journey.json",
+];
+
+const slendermanURIs = [
+  "https://bafybeiggcwud3tyjl2yj5s3ijj2wnjpe3mmmcxglsy45gvg5a7opjyjtky.ipfs.w3s.link/slenderman.json",
+  "https://bafybeiggcwud3tyjl2yj5s3ijj2wnjpe3mmmcxglsy45gvg5a7opjyjtky.ipfs.w3s.link/slenderman.json",
+  "https://bafybeiggcwud3tyjl2yj5s3ijj2wnjpe3mmmcxglsy45gvg5a7opjyjtky.ipfs.w3s.link/slenderman.json",
+  "https://bafybeiggcwud3tyjl2yj5s3ijj2wnjpe3mmmcxglsy45gvg5a7opjyjtky.ipfs.w3s.link/slenderman.json",
+  "https://bafybeiggcwud3tyjl2yj5s3ijj2wnjpe3mmmcxglsy45gvg5a7opjyjtky.ipfs.w3s.link/slenderman.json",
+  "https://bafybeiggcwud3tyjl2yj5s3ijj2wnjpe3mmmcxglsy45gvg5a7opjyjtky.ipfs.w3s.link/slenderman.json",
+];
+
 const pokemonURIs = [
   "https://bafybeige5msa2ew7qgrqtp3f667gvvsfz4z7a64ezk6v4vy2nnopqpxqeq.ipfs.w3s.link/1.json",
   "https://bafybeicumamfmebf254r66lzcjo5azj76gesogb7jff6hus2gjhjn3aux4.ipfs.w3s.link/2.json",
@@ -52,14 +70,15 @@ async function main() {
   }
 }
 
+const address = process.env.JOURNEY_CONTRACT_ADDRESS ?? "";
+const URIs = journeyURIs;
+const userAddress = "0x72f97e9Be4C6EB8f0eb2fD483945385A9a742C0b";
+
 async function createAssets() {
   try {
-    const address = process.env.NFT_CONTRACT_ADDRESS ?? "";
-    const userAddress = "0xDc7bE36Cbd7B28f13acbdAa084457DA9C6D210D4";
-
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= URIs.length; i++) {
       const tokenId = i;
-      const response = await fetch(tokenURIs[i - 1]);
+      const response = await fetch(URIs[i - 1]);
       const metadata = await response.json();
 
       const uuid = `${address.substring(0, 10)}+${tokenId}`;
@@ -120,10 +139,7 @@ async function createAssets() {
 
 async function createListings() {
   try {
-    const address = process.env.NFT_CONTRACT_ADDRESS ?? "";
-    const userAddress = "0xDc7bE36Cbd7B28f13acbdAa084457DA9C6D210D4";
-
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= URIs.length; i++) {
       const tokenId = i;
       const uuid = `${address.substring(0, 10)}+${tokenId}`;
 
@@ -161,4 +177,8 @@ async function createListings() {
   }
 }
 
-main();
+main().catch((error) => {
+  console.error(error);
+  console.log(error.message);
+  process.exitCode = 1;
+});

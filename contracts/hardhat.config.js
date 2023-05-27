@@ -2,49 +2,7 @@ require("@nomicfoundation/hardhat-toolbox");
 require("@nomiclabs/hardhat-etherscan");
 require("dotenv").config();
 
-const {
-  GOERLI_API_URL,
-  THETA_API_URL_URL,
-  PRIVATE_KEY,
-  ETHERSCAN_API_KEY,
-  EXPLORER_API_URL_API_KEY,
-  NEXUS_CONTRACT_ADDRESS,
-  NFT_CONTRACT_ADDRESS,
-} = process.env;
-
-task("etherscan-verify", "Verifies on etherscan", async (taskArgs, hre) => {
-  console.log("Verifying contract on etherscan...");
-  await hre.run("verify:verify", {
-    address: NEXUS_CONTRACT_ADDRESS,
-    network: taskArgs["network"],
-  });
-});
-
-/** @type import('hardhat/config').HardhatUserConfig */
-// module.exports = {
-//   solidity: "0.8.17",
-//   defaultNetwork: "thetaTestnet",
-//   networks: {
-//     goerli: {
-//       url: GOERLI_API_URL ?? "",
-//       accounts: [`0x${PRIVATE_KEY}`],
-//       gasPrice: 100000000000,
-//     },
-//     thetaTestnet: {
-//       url: THETA_API_URL_URL ?? "",
-//       accounts: [`0x${PRIVATE_KEY}`],
-//     },
-//   },
-//   etherscan: {
-//     apiKey: {
-//       thetaTestnet: EXPLORER_API_URL_API_KEY,
-//       goerli: ETHERSCAN_API_KEY,
-//     },
-//   },
-// };
-
-// require("@nomiclabs/hardhat-waffle");
-// require("dotenv").config();
+const { NEXUS_CONTRACT_ADDRESS } = process.env;
 
 module.exports = {
   defaultNetwork: "theta_testnet",
@@ -75,7 +33,7 @@ module.exports = {
     },
   },
   solidity: {
-    version: "0.7.6",
+    version: "0.8.1",
     settings: {
       optimizer: {
         enabled: true,
