@@ -180,7 +180,7 @@ function Asset() {
       },
       {
         title: "View collection on Thetascan",
-        link: `https://testnet.thetascan.com/token/${collectionAddress}`,
+        link: `https://testnet-explorer.thetatoken.org/account/${collectionAddress}`,
       },
     ];
   }, [metadata, tokenURI]);

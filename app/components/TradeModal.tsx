@@ -251,13 +251,13 @@ function TradeModal({
 
   const thetascanLink = useMemo(() => {
     if (fulfillTxnHash)
-      return `https://testnet.thetascan.com/tx/${fulfillTxnHash.hash}`;
+      return `https://testnet-explorer.thetatoken.org/txs/${fulfillTxnHash.hash}`;
 
     if (cancelTxnHash)
-      return `https://testnet.thetascan.com/tx/${cancelTxnHash.hash}`;
+      return `https://testnet-explorer.thetatoken.org/txs/${cancelTxnHash.hash}`;
 
     if (createTxnHash)
-      return `https://testnet.thetascan.com/tx/${createTxnHash.hash}`;
+      return `https://testnet-explorer.thetatoken.org/txs/${createTxnHash.hash}`;
   }, [fulfillTxnHash, cancelTxnHash, createTxnHash]);
 
   const listingPriceFiat = useMemo(

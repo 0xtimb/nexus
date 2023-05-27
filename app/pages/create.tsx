@@ -219,7 +219,7 @@ function Create() {
               </Button>
             </Link>
             <ChakraLink
-              href={`https://testnet.thetascan.com/tx/${txnHash}`}
+              href={`https://testnet-explorer.thetatoken.org/txs/${txnHash}`}
               isExternal
             >
               <Button className={styles.modalBtn2} onClick={() => {}}>
