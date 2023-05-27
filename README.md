@@ -32,8 +32,8 @@ The vision of Nexus is to become the one-stop shop to serve all Theta-based meta
 
 ### Deployed Contracts:
 
-- Nexus Protocol v1 (Theta Testnet: [0xCaFCBBB6D38E1ff9313063c0694A1E73ac8Ef962](https://explorer.thetatoken.org/)
-- Nexus Collection 3 (Theta Testnet: [0x3c9c68B8802e90B3E14DC6b8865D9eAB6C7E9FB0](https://explorer.thetatoken.org/)
+- Nexus Protocol v1 (Theta Testnet: [0x2E3f04D8B98e220521d44EaD1575e88216c94175](https://testnet-explorer.thetatoken.org/account/0x2E3f04D8B98e220521d44EaD1575e88216c94175)
+- Nexus Collection 3 (Theta Testnet: [0x37fe9bc0a05fae8a9b5b299Ff2dcaf34245CC26E](https://testnet-explorer.thetatoken.org/account/0x37fe9bc0a05fae8a9b5b299Ff2dcaf34245CC26E)
 
 ### Next Steps
 
